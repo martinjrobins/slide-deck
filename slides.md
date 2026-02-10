@@ -292,6 +292,7 @@ layout: two-cols
 
 Thanks for listening!
 
+![Oxford RSE logos](/2024_oxrse_next_to_oxford.svg){style="height: 10rem;"}
 
 ## Links:
 
@@ -309,3 +310,11 @@ Martin Robinson <mailto:martin.robinson@dtc.ox.ac.uk>
 Oxford Research Software Engineering Group
 
 ## These slides:
+
+<https://martinjrobins.github.io/slide-deck>
+
+<div class="flex justify-center items-center">
+  <a href="https://martinjrobins.github.io/slide-deck" target="_blank">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://martinjrobins.github.io/slide-deck" alt="QR code to slide deck" class="w-70 h-70" />
+  </a>
+</div>
