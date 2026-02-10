@@ -154,20 +154,158 @@ src: ./pages/diffsol/benchmarks-python-robertson.md
 ---
 
 ---
-layout: center
-class: text-center
+layout: default
+class: text-left
+---
+
+# PINTS Background
+
+In many situations, we have a model with parameter values that we need to infer from noisy time-series data.
+
+**PINTS** stands for **P**robabilistic **I**nference on **N**oisy **T**ime-**S**eries.
+
+It is a Python-based tool to tackle inference problems within a probabilistic framework.
+
+<a href="https://github.com/pints-team/pints" target="_blank">Free PINTS! https://github.com/pints-team/pints</a>
+
+```bash
+pip install pints
+```
+
+---
+layout: two-cols
+---
+
+# Problem Statement
+
+Given:
+- Noisy experimental time series data
+- A forward model with $d$ parameters that can predict values for a given set of times
+
+We want to:
+- Find the best set of parameters (optimisation)
+- Explore their likelihood (sampling)
+
+::right::
+![](/pints/problem-statement-1.png)
+
+
+---
+
+# Implementation in Python
+
+```python
+class MyModel(pints.Model):
+    def n_parameters(self):
+        ...
+    
+    def simulate(self, parameters, times):
+        ...
+        return simulated_values
+
+problem = SingleOutputProblem(model, times, measured_values)
+error_measure = SumOfSquaresError(problem)
+log_likelihood = GaussianLogLikelihood(problem)
+
+optimisation = OptimisationController(error_measure, initial_point)
+mcmc = MCMCController(log_likelihood, n_chains, initial_points)
+
+best_parameters = optimisation.run()
+chains = mcmc.run()
+```
+
+---
+
+# What's in PINTS?
+
+- Samplers
+- Optimisers
+- Likelihoods and error functions
+- Toy problems and distributions
+- Diagnostic plots
+- Documentation & Examples
+
+---
+layout: two-cols
+---
+
+# Optimisers
+
+**Gradient-free methods:**
+- CMAES (Hansen et al., 2006)
+- XNES (Glasmachers et al., 2010)
+- SNES (Schaul et al., 2011)
+- PSO (Kennedy & Eberhart, 1995)
+- Nelder-Mead simplex method (Nelder & Mead, 1965)
+- SHGO (planned)
+
+**Gradient-based methods:**
+- Gradient descent
+- BFGS (planned)
+
+::right::
+
+![](/pints/samplers-1.png)
+
+
+
+---
+
+# Likelihoods and Error Functions
+
+<img src="/pints/likelihoods-and-error-functions-0.png" class="w-full max-h-[80%] object-contain" />
+
+---
+layout: two-cols
+---
+
+# Diagnostic Plots
+
+<img src="/pints/diagnostic-plots-0.png" class="w-full max-h-[40%] object-contain mb-3" />
+
+<img src="/pints/diagnostic-plots-2.png" class="w-full max-h-[40%] object-contain" />
+
+::right::
+<img src="/pints/diagnostic-plots-1.png" class="w-full max-h-[80%] object-contain" />
+
+---
+layout: two-cols
+---
+
+# Documentation & Examples
+
+<img src="/pints/documentation-examples-0.png" class="w-full max-h-[35%] object-contain mb-3" />
+
+<img src="/pints/slide-22-image-0.png" class="w-full max-h-[35%] object-contain" />
+
+::right::
+
+<img src="/pints/slide-21-image-0.png" class="w-full max-h-[35%] object-contain mb-3" />
+
+<img src="/pints/slide-24-image-0.png" class="w-full max-h-[35%] object-contain" />
+
+---
+layout: two-cols
 ---
 
 # Qustions?
 
-[Diffsol book](https://martinjrobins.github.io/diffsol/) · [GitHub](https://github.com/martinjrobins/diffsol)
+Thanks for listening!
 
-Martin Robinson
 
+## Links:
+
+- OxRSE: https://www.rse.ox.ac.uk
+- DiffSL: <https:://github.com/martinjrobins/diffsl>
+- diffsol: https://github.com/martinjrobins/diffsol
+- pydiffsol: https://github.com/alexallmont/pydiffsol
+- PINTS: https://github.com/pints-team/pints
+
+::right::
+
+## Contact:
+
+Martin Robinson <mailto:martin.robinson@dtc.ox.ac.uk>
 Oxford Research Software Engineering Group
 
-Doctoral Training Centre
-
-University of Oxford
-
-martin.robinson@dtc.ox.ac.uk
+## These slides:
