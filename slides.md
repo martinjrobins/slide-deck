@@ -154,6 +154,10 @@ src: ./pages/diffsol/benchmarks-python-robertson.md
 ---
 
 ---
+src: ./pages/diffsol/interactive-solver.md
+---
+
+---
 layout: default
 class: text-left
 ---
