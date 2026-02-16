@@ -15,7 +15,7 @@ class: flex flex-col justify-center items-center text-center
         <span class="ml-5 font-italic">increase the competitiveness of funding applications</span>
         <h5>Deliver high-quality software to enable research outputs</h5> 
         <span class="ml-5 font-italic">increase impact and reliability of research</span>
-        <h5>Provid software engineering training, consultancy and code review</h5> 
+        <h5>Provide software engineering training, consultancy and code review</h5> 
         <span class="ml-5 font-italic">enable research teams to work effectively to produce software</span>
         <br /><br />
         <h4 class="font-semibold">Leads to software outputs that can be more easily and directly translated and commercialised</h4>

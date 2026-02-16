@@ -9,8 +9,7 @@ level: 3
    Simple string syntax allowing for using diffsol from a high-level language like Python or R.
 
 ```
-in = [a]
-a { 1.0 }
+in { a = 1.0 }
 u { 1.0 }
 F { -a * u }
 ```

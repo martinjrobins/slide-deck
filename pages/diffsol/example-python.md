@@ -16,8 +16,7 @@ Using [pydiffsol](https://github.com/alexallmont/pydiffsol), the Python bindings
 import pydiffsol as ds
 
 ode = ds.Ode("""
-    in = [r, k]
-    r { 1.0 } k { 1.0 }
+    in_i { r = 1.0, k = 1.0 }
     u { 0.1 }
     F { r * u * (1.0 - u / k) }
     """,
