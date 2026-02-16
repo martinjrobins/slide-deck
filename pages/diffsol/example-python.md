@@ -10,7 +10,7 @@ y(0) &= 0.1 \\
 \end{align*}
 $$
 
-Using pydiffsol, the Python bindings for Diffsol (`pip install pydiffsol`):
+Using [pydiffsol](https://github.com/alexallmont/pydiffsol), the Python bindings for Diffsol (`pip install pydiffsol`):
 
 ```python
 import pydiffsol as ds

@@ -57,7 +57,7 @@ onMounted(() => {
         moduleConfig: {
           backendUrl: 'https://diffsol-js.fly.dev',
         },
-        finalTime: 1.0,
+        finalTime: 10.0,
         matrixType: MatrixType.FaerDense,
         linearSolverType: LinearSolverType.Lu,
         odeSolverType: OdeSolverType.Bdf,
